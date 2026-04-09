@@ -1,0 +1,212 @@
+{
+  "topics": [
+    {
+      "slug": "dna-replication",
+      "title": "DNA Replication",
+      "field": "Biology • DNA",
+      "summary": "Explore how cells copy their DNA so that genetic information is passed on accurately from one generation to the next.",
+      "videoUrl": "",
+      "sections": [
+        {
+          "id": "what-is",
+          "title": "What is DNA replication?",
+          "paragraphs": [
+            "DNA replication is the process of making an exact copy of a DNA molecule before a cell divides. Each strand of the original double helix acts as a template for a new strand."
+          ]
+        },
+        {
+          "id": "why-it-matters",
+          "title": "Why does it matter?",
+          "paragraphs": [
+            "Without reliable replication, cells could lose or change important genetic instructions. Accurate copying keeps your traits, and the instructions inside your cells, consistent over time."
+          ]
+        },
+        {
+          "id": "steps",
+          "title": "Main steps of DNA replication",
+          "paragraphs": [
+            "Step 1 – DNA unwinds: the double helix opens so that each strand can serve as a template. Enzymes such as helicase break the hydrogen bonds between the bases.",
+            "Step 2 – Complementary base pairing: new free-floating nucleotides line up with the exposed bases following matching rules (A pairs with T, C pairs with G).",
+            "Step 3 – New strands form: enzymes connect the new nucleotides together, building the sugar–phosphate backbone so that each new DNA molecule has one original strand and one new strand."
+          ]
+        },
+        {
+          "id": "enzymes",
+          "title": "Key enzymes involved",
+          "paragraphs": [
+            "Important enzymes include helicase (unwinds the helix), primase (lays down a short starting piece), DNA polymerase (adds new nucleotides), and ligase (seals small gaps in the backbone)."
+          ]
+        },
+        {
+          "id": "errors",
+          "title": "Common errors and mutations",
+          "paragraphs": [
+            "Occasionally, mistakes happen when DNA is copied. These changes are called mutations. Many are fixed or have no effect, but some can be harmful or, in rare cases, helpful for evolution."
+          ]
+        },
+        {
+          "id": "cs-connection",
+          "title": "Connection to Computer Science",
+          "paragraphs": [
+            "DNA replication is a lot like copying data in computing. There is an input (the original DNA), an output (two copies), clear step-by-step rules, and built-in error checking. These ideas connect to algorithms and time & space complexity in Computer Science."
+          ]
+        }
+      ],
+      "quiz": {
+        "title": "Quick check: Can you explain it?",
+        "questions": [
+          {
+            "prompt": "Which statement best describes complementary base pairing?",
+            "options": [
+              "Any base can pair with any other base.",
+              "A always pairs with T and C always pairs with G.",
+              "Bases pair randomly during replication."
+            ],
+            "correctIndex": 1,
+            "explanation": "Complementary base pairing means A pairs with T and C pairs with G, which helps keep the genetic information consistent."
+          },
+          {
+            "prompt": "Why is DNA replication important for cells?",
+            "options": [
+              "It creates energy for the cell.",
+              "It makes sure new cells receive a full copy of genetic instructions.",
+              "It removes mutations from DNA."
+            ],
+            "correctIndex": 1,
+            "explanation": "Replication copies DNA so that when a cell divides, each new cell inherits a complete set of instructions."
+          }
+        ]
+      },
+      "related": ["time-space-complexity"]
+    },
+    {
+      "slug": "forces-motion",
+      "title": "Forces & Motion",
+      "field": "Physics",
+      "summary": "Discover how pushes, pulls, and other forces change the motion of objects in the world around you.",
+      "videoUrl": "",
+      "sections": [
+        {
+          "id": "what-is-force",
+          "title": "What is force?",
+          "paragraphs": [
+            "A force is a push or a pull on an object. Forces can start motion, stop motion, or change how something is moving."
+          ]
+        },
+        {
+          "id": "what-is-motion",
+          "title": "What is motion?",
+          "paragraphs": [
+            "Motion is a change in position over time. To describe motion, we talk about how fast an object moves and in what direction."
+          ]
+        },
+        {
+          "id": "types-of-forces",
+          "title": "Types of forces",
+          "paragraphs": [
+            "There are many kinds of forces, such as gravity, friction, normal force, and applied forces. Each type affects motion in a slightly different way."
+          ]
+        },
+        {
+          "id": "net-force",
+          "title": "Net force",
+          "paragraphs": [
+            "When more than one force acts on an object, they combine to create a net force. The net force determines how the object\u2019s motion will change."
+          ]
+        },
+        {
+          "id": "examples",
+          "title": "Real-world examples",
+          "paragraphs": [
+            "From a ball rolling down a hill to a car stopping at a red light, forces and motion are at work everywhere in everyday life."
+          ]
+        },
+        {
+          "id": "cs-connection",
+          "title": "Connection to Computer Science",
+          "paragraphs": [
+            "Computer simulations and video games use rules about forces and motion to move objects on the screen. Programs update positions step by step, similar to how physics describes motion over time."
+          ]
+        }
+      ],
+      "quiz": {
+        "title": "Quick check: Forces & motion",
+        "questions": [
+          {
+            "prompt": "What is a force?",
+            "options": [
+              "A type of energy.",
+              "A push or pull on an object.",
+              "A change in temperature."
+            ],
+            "correctIndex": 1,
+            "explanation": "A force is any push or pull on an object that can change its motion."
+          }
+        ]
+      },
+      "related": ["dna-replication"]
+    },
+    {
+      "slug": "time-space-complexity",
+      "title": "Time & Space Complexity",
+      "field": "Computer Science",
+      "summary": "Explore how we measure the running time and memory usage of algorithms as their inputs get larger.",
+      "videoUrl": "",
+      "sections": [
+        {
+          "id": "time-complexity",
+          "title": "What is time complexity?",
+          "paragraphs": [
+            "Time complexity describes how the number of steps an algorithm needs grows with the size of its input."
+          ]
+        },
+        {
+          "id": "space-complexity",
+          "title": "What is space complexity?",
+          "paragraphs": [
+            "Space complexity tracks how much extra memory an algorithm needs as the input grows."
+          ]
+        },
+        {
+          "id": "why-efficiency-matters",
+          "title": "Why efficiency matters",
+          "paragraphs": [
+            "Efficient algorithms save time and memory. This becomes important when working with large datasets or limited devices like phones or microcontrollers."
+          ]
+        },
+        {
+          "id": "common-examples",
+          "title": "Common examples: O(1), O(n), O(n^2)",
+          "paragraphs": [
+            "O(1) means the work stays about the same even if the input grows.",
+            "O(n) means the work grows roughly in proportion to the size of the input.",
+            "O(n^2) means the work grows quickly as the input grows, like checking all pairs in a list."
+          ]
+        },
+        {
+          "id": "problem-solving",
+          "title": "Connection to problem solving",
+          "paragraphs": [
+            "When you design an algorithm, you are choosing a strategy for solving a problem. Thinking about time and space complexity helps you compare strategies and pick one that will still work when the input grows."
+          ]
+        }
+      ],
+      "quiz": {
+        "title": "Quick check: Complexity",
+        "questions": [
+          {
+            "prompt": "If doubling the input size roughly doubles the work, which complexity class is this most like?",
+            "options": [
+              "O(1)",
+              "O(n)",
+              "O(n^2)"
+            ],
+            "correctIndex": 1,
+            "explanation": "If work grows in direct proportion to input size, it is like O(n)."
+          }
+        ]
+      },
+      "related": ["dna-replication"]
+    }
+  ]
+}

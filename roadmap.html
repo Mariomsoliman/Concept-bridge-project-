@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roadmap Explorer &bull; Concept Bridge</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page page--roadmap">
+  <header class="site-header">
+    <div class="site-header__inner">
+      <h1 class="logo">Concept Bridge</h1>
+      <nav class="top-nav" aria-label="Main site navigation">
+        <a href="index.html" class="top-nav__link">Home</a>
+        <a href="ns.html" class="top-nav__link">Natural Science</a>
+        <a href="cs.html" class="top-nav__link">Computer Science</a>
+        <a href="roadmap.html" class="top-nav__link top-nav__link--active">Roadmap Explorer</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="roadmap">
+    <section class="roadmap__intro">
+      <p class="eyebrow">Roadmap Explorer</p>
+      <h2 class="roadmap__title">Let&apos;s build a roadmap together</h2>
+      <p class="roadmap__subtitle">
+        Answer a couple of quick questions and we&apos;ll reveal only the roadmaps that fit what you
+        want to explore.
+      </p>
+    </section>
+
+    <section class="roadmap__domains" aria-label="Step 1: Choose what to explore">
+      <h3 class="roadmap-step__title">What would you like to explore?</h3>
+      <p class="roadmap-step__subtitle">Pick a domain to start your guided roadmap.</p>
+      <div class="roadmap-domains__grid">
+        <button type="button" class="roadmap-domain-card roadmap-domain-card--ns" data-domain="ns">
+          <h3>Natural Science</h3>
+          <p>Biology, Physics, Chemistry, Earth Science, Astronomy.</p>
+          <p class="roadmap-domain-card__status">Detailed roadmaps coming soon</p>
+        </button>
+        <button type="button" class="roadmap-domain-card roadmap-domain-card--cs" data-domain="cs">
+          <h3>Computer Science</h3>
+          <p>Explore practical roadmaps for roles and core skills.</p>
+          <p class="roadmap-domain-card__status">Guided role &amp; skill roadmaps available</p>
+        </button>
+      </div>
+    </section>
+
+    <section
+      id="roadmap-kind-step"
+      class="roadmap__step roadmap__step--kind roadmap-flow-target"
+      aria-label="Step 2: Choose roadmap type"
+      hidden
+    >
+      <h3 class="roadmap-step__title">Which kind of roadmap do you want?</h3>
+      <p class="roadmap-step__subtitle">Choose between a role-based or skill-based path.</p>
+      <div class="roadmap-domains__grid">
+        <button type="button" class="roadmap-kind-card" data-kind="role">
+          <h3>Role-based</h3>
+          <p>Start from the job title you care about.</p>
+        </button>
+        <button type="button" class="roadmap-kind-card" data-kind="skill">
+          <h3>Skill-based</h3>
+          <p>Focus on one core CS skill at a time.</p>
+        </button>
+      </div>
+    </section>
+
+    <section
+      id="roadmap-ns"
+      class="roadmap__section roadmap__section--ns roadmap-flow-target"
+      aria-label="Natural Science roadmaps"
+      hidden
+    >
+      <h3 class="roadmap-section__title">Natural Science roadmaps</h3>
+      <p class="roadmap-section__subtitle">
+        These subject areas are part of Concept Bridge today. Full step-by-step roadmaps are on the
+        way.
+      </p>
+      <div class="roadmap-grid">
+        <article class="concept-card concept-card--biology roadmap-card roadmap-card--coming-soon" aria-disabled="true">
+          <h3>Biology foundations</h3>
+          <p>Start with DNA Replication and core molecular biology ideas.</p>
+          <p class="roadmap-card__pill">Roadmap coming soon</p>
+        </article>
+
+        <article class="concept-card concept-card--physics roadmap-card roadmap-card--coming-soon" aria-disabled="true">
+          <h3>Physics foundations</h3>
+          <p>Explore Forces &amp; Motion, then extend to energy and waves.</p>
+          <p class="roadmap-card__pill">Roadmap coming soon</p>
+        </article>
+
+        <article class="concept-card concept-card--chemistry roadmap-card roadmap-card--coming-soon" aria-disabled="true">
+          <h3>Chemistry pathway</h3>
+          <p>From atoms and bonds to reactions and energy.</p>
+          <p class="roadmap-card__pill">Roadmap coming soon</p>
+        </article>
+
+        <article class="concept-card concept-card--earth roadmap-card roadmap-card--coming-soon" aria-disabled="true">
+          <h3>Earth Science pathway</h3>
+          <p>Planet structure, climate, and systems over time.</p>
+          <p class="roadmap-card__pill">Roadmap coming soon</p>
+        </article>
+
+        <article class="concept-card concept-card--astronomy roadmap-card roadmap-card--coming-soon" aria-disabled="true">
+          <h3>Astronomy pathway</h3>
+          <p>From the Solar System to galaxies and cosmology.</p>
+          <p class="roadmap-card__pill">Roadmap coming soon</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="roadmap-cs" class="roadmap__section roadmap__section--cs" aria-label="Computer Science roadmaps">
+      <div id="roadmap-cs-role" class="roadmap-section roadmap-flow-target" hidden>
+        <h3 class="roadmap-section__title">Role-based roadmaps</h3>
+        <p class="roadmap-section__subtitle">
+          Choose a role you care about and follow a structured CS learning path.
+        </p>
+        <div class="roadmap-grid">
+          <a href="cs-roadmap.html?type=role&amp;key=frontend" class="concept-card concept-card--dsa roadmap-card">
+            <h3>Frontend Engineer</h3>
+            <p>From HTML/CSS basics to modern React-based interfaces.</p>
+            <p class="roadmap-card__pill">View roadmap</p>
+          </a>
+
+          <a href="cs-roadmap.html?type=role&amp;key=backend" class="concept-card concept-card--systems roadmap-card">
+            <h3>Backend Engineer</h3>
+            <p>APIs, databases, and scalable server-side systems.</p>
+            <p class="roadmap-card__pill">View roadmap</p>
+          </a>
+
+          <a href="cs-roadmap.html?type=role&amp;key=fullstack" class="concept-card concept-card--se roadmap-card">
+            <h3>Full-Stack Engineer</h3>
+            <p>Combine frontend and backend skills into complete products.</p>
+            <p class="roadmap-card__pill">View roadmap</p>
+          </a>
+
+          <a href="cs-roadmap.html?type=role&amp;key=ai" class="concept-card concept-card--ai roadmap-card">
+            <h3>AI / ML Engineer</h3>
+            <p>Math, data, and models that power intelligent systems.</p>
+            <p class="roadmap-card__pill">View roadmap</p>
+          </a>
+
+          <a href="cs-roadmap.html?type=role&amp;key=data-analyst" class="concept-card concept-card--db roadmap-card">
+            <h3>Data Analyst</h3>
+            <p>From SQL basics to dashboards and storytelling with data.</p>
+            <p class="roadmap-card__pill">View roadmap</p>
+          </a>
+
+          <a href="cs-roadmap.html?type=role&amp;key=devops" class="concept-card concept-card--systems roadmap-card">
+            <h3>DevOps / Cloud Engineer</h3>
+            <p>Automation, CI/CD, containers, and cloud platforms.</p>
+            <p class="roadmap-card__pill">View roadmap</p>
+          </a>
+
+          <a href="cs-roadmap.html?type=role&amp;key=cybersecurity" class="concept-card concept-card--theory roadmap-card">
+            <h3>Cybersecurity Engineer</h3>
+            <p>Security fundamentals, threat modeling, and defenses.</p>
+            <p class="roadmap-card__pill">View roadmap</p>
+          </a>
+
+          <a href="cs-roadmap.html?type=role&amp;key=ux" class="concept-card concept-card--graphics roadmap-card">
+            <h3>UX / Product Designer</h3>
+            <p>Research, interaction design, and prototyping skills.</p>
+            <p class="roadmap-card__pill">View roadmap</p>
+          </a>
+        </div>
+      </div>
+
+      <div id="roadmap-cs-skill" class="roadmap-section roadmap-flow-target" hidden>
+        <h3 class="roadmap-section__title">Skill-based roadmaps</h3>
+        <p class="roadmap-section__subtitle">
+          Focus on a single skill and see a clear progression of topics and practice.
+        </p>
+        <div class="roadmap-grid">
+          <a href="cs-roadmap.html?type=skill&amp;key=python" class="concept-card concept-card--ai roadmap-card">
+            <h3>Python</h3>
+            <p>From syntax and scripting to data science and automation.</p>
+            <p class="roadmap-card__pill">View roadmap</p>
+          </a>
+
+          <a href="cs-roadmap.html?type=skill&amp;key=javascript" class="concept-card concept-card--graphics roadmap-card">
+            <h3>JavaScript</h3>
+            <p>Language fundamentals for the web and interactive apps.</p>
+            <p class="roadmap-card__pill">View roadmap</p>
+          </a>
+
+          <a href="cs-roadmap.html?type=skill&amp;key=react" class="concept-card concept-card--se roadmap-card">
+            <h3>React</h3>
+            <p>Component-based UIs, state management, and routing.</p>
+            <p class="roadmap-card__pill">View roadmap</p>
+          </a>
+
+          <a href="cs-roadmap.html?type=skill&amp;key=sql" class="concept-card concept-card--db roadmap-card">
+            <h3>SQL</h3>
+            <p>Querying, modeling, and working with relational data.</p>
+            <p class="roadmap-card__pill">View roadmap</p>
+          </a>
+
+          <a href="cs-roadmap.html?type=skill&amp;key=dsa" class="concept-card concept-card--dsa roadmap-card">
+            <h3>Data Structures &amp; Algorithms</h3>
+            <p>Core problem-solving tools for technical interviews.</p>
+            <p class="roadmap-card__pill">View roadmap</p>
+          </a>
+
+          <a href="cs-roadmap.html?type=skill&amp;key=html-css" class="concept-card concept-card--graphics roadmap-card">
+            <h3>HTML &amp; CSS</h3>
+            <p>Structure, layout, and responsive design for the web.</p>
+            <p class="roadmap-card__pill">View roadmap</p>
+          </a>
+
+          <a href="cs-roadmap.html?type=skill&amp;key=system-design" class="concept-card concept-card--systems roadmap-card">
+            <h3>System Design</h3>
+            <p>How to reason about scalable, reliable software systems.</p>
+            <p class="roadmap-card__pill">View roadmap</p>
+          </a>
+
+          <a href="cs-roadmap.html?type=skill&amp;key=docker" class="concept-card concept-card--systems roadmap-card">
+            <h3>Docker</h3>
+            <p>Packaging and running applications in containers.</p>
+            <p class="roadmap-card__pill">View roadmap</p>
+          </a>
+
+          <a href="cs-roadmap.html?type=skill&amp;key=kubernetes" class="concept-card concept-card--systems roadmap-card">
+            <h3>Kubernetes</h3>
+            <p>Orchestrating containers for resilience and scale.</p>
+            <p class="roadmap-card__pill">View roadmap</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Your roadmap is a starting point &mdash; you can always explore and adjust as you go.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

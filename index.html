@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Learning Platform</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page page--home">
+  <header class="site-header">
+    <div class="site-header__inner">
+      <h1 class="logo">Concept Bridge</h1>
+      <nav class="top-nav" aria-label="Main site navigation">
+        <a href="index.html" class="top-nav__link top-nav__link--active">Home</a>
+        <a href="ns.html" class="top-nav__link">Natural Science</a>
+        <a href="cs.html" class="top-nav__link">Computer Science</a>
+        <a href="roadmap.html" class="top-nav__link">Roadmap Explorer</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="home-main">
+    <section class="hero" aria-labelledby="home-title">
+      <p class="hero__eyebrow">Concept Bridge</p>
+      <h2 id="home-title" class="hero__title">Where Science Meets Computation</h2>
+      <p class="hero__subtitle">
+        Explore Natural Science and Computer Science through guided pathways, focused concept hubs,
+        and connected lessons.
+      </p>
+    </section>
+
+    <section class="home-intro" aria-label="Main learning options">
+      <h2 class="home-intro__title">Choose how you want to begin</h2>
+
+      <div class="home-actions__grid">
+        <a href="#natural-science" class="primary-card">
+          <h3>Explore Natural Science</h3>
+          <p>Dive into Biology and Physics hubs to see how the natural world works.</p>
+        </a>
+        <a href="#computer-science" class="primary-card">
+          <h3>Explore Computer Science</h3>
+          <p>Start with Algorithms &amp; Data Structures, then branch into other CS areas.</p>
+        </a>
+        <a href="#roadmap" class="primary-card">
+          <h3>Open the Roadmap Explorer</h3>
+          <p>Browse role-based and skill-based paths that connect Natural Science and CS.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Dropdown panels that will be shown and hidden with JavaScript -->
+    <section id="natural-science" class="home-panel expand-panel card" aria-label="Natural Science fields" hidden>
+      <div class="expand-panel__header">
+        <h3>Natural Science hubs</h3>
+        <p>Select a field to explore more detailed concepts and lessons.</p>
+      </div>
+      <div class="expand-panel__body">
+        <div class="pill-row">
+          <a href="biology.html" class="pill">Biology hub</a>
+          <a href="physics.html" class="pill">Physics hub</a>
+          <a href="#" class="pill" aria-disabled="true">Chemistry (coming soon)</a>
+          <a href="#" class="pill" aria-disabled="true">Earth Science (coming soon)</a>
+          <a href="#" class="pill" aria-disabled="true">Astronomy (coming soon)</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="computer-science" class="home-panel expand-panel card" aria-label="Computer Science fields" hidden>
+      <div class="expand-panel__header">
+        <h3>Computer Science hubs</h3>
+        <p>Core areas you can explore on this platform.</p>
+      </div>
+      <div class="expand-panel__body">
+        <div class="pill-row">
+          <a href="dsa.html" class="pill">DSA hub</a>
+          <a href="#" class="pill" aria-disabled="true">Software Engineering (coming soon)</a>
+          <a href="#" class="pill" aria-disabled="true">Systems (coming soon)</a>
+          <a href="#" class="pill" aria-disabled="true">AI / ML (coming soon)</a>
+          <a href="#" class="pill" aria-disabled="true">Databases (coming soon)</a>
+          <a href="#" class="pill" aria-disabled="true">Theory (coming soon)</a>
+          <a href="#" class="pill" aria-disabled="true">Graphics / HCI (coming soon)</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="roadmap" class="home-panel expand-panel card" aria-label="Roadmap Explorer" hidden>
+      <div class="expand-panel__header">
+        <h3>Your learning roadmap</h3>
+        <p>Explore curated pathways for CS roles and skills, plus Natural Science foundations.</p>
+      </div>
+      <div class="expand-panel__body">
+        <p>
+          When you're ready for the full roadmap experience, open the Roadmap Explorer.
+        </p>
+        <div class="pill-row">
+          <a href="roadmap.html" class="pill">Open Roadmap Explorer</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Concept Bridge &mdash; Learning Platform</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

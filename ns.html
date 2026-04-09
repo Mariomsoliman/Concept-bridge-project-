@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore Natural Science – Interactive NS + CS Learning Platform</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page page--category page--ns">
+  <header class="site-header">
+    <div class="site-header__inner">
+      <h1 class="logo">Interactive NS + CS</h1>
+      <nav class="top-nav" aria-label="Main site navigation">
+        <a href="index.html" class="top-nav__link">Home</a>
+        <a href="ns.html" class="top-nav__link top-nav__link--active">Natural Science</a>
+        <a href="cs.html" class="top-nav__link">Computer Science</a>
+        <a href="roadmap.html" class="top-nav__link">Roadmap Explorer</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="category">
+    <section class="category__intro">
+      <p class="eyebrow">Natural Science</p>
+      <h2 class="category__title">Explore Natural Science</h2>
+      <p class="category__subtitle">
+        Choose a field to start exploring key ideas about how the natural world works.
+      </p>
+    </section>
+
+    <section class="category__grid" aria-label="Natural Science categories">
+      <article class="concept-card concept-card--biology">
+        <h3>Biology</h3>
+        <p>Study life, from molecules and cells to whole ecosystems.</p>
+        <a href="biology.html" class="concept-card__link">Open Biology</a>
+      </article>
+
+      <article class="concept-card concept-card--physics">
+        <h3>Physics</h3>
+        <p>Understand matter, motion, energy, and the laws that govern the universe.</p>
+        <a href="physics.html" class="concept-card__link">Open Physics</a>
+      </article>
+
+      <article class="concept-card concept-card--chemistry">
+        <h3>Chemistry</h3>
+        <p>Explore how substances interact, react, and transform at the atomic level.</p>
+        <button type="button" class="concept-card__link concept-card__link--disabled" aria-disabled="true" disabled>
+          Chemistry (coming soon)
+        </button>
+      </article>
+
+      <article class="concept-card concept-card--earth">
+        <h3>Earth Science</h3>
+        <p>Investigate our planet, from oceans and atmosphere to rocks and climate.</p>
+        <button type="button" class="concept-card__link concept-card__link--disabled" aria-disabled="true" disabled>
+          Earth Science (coming soon)
+        </button>
+      </article>
+
+      <article class="concept-card concept-card--astronomy">
+        <h3>Astronomy</h3>
+        <p>Look outward to stars, galaxies, and the structure of the universe.</p>
+        <button type="button" class="concept-card__link concept-card__link--disabled" aria-disabled="true" disabled>
+          Astronomy (coming soon)
+        </button>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Natural Science hub &mdash; pick a field to begin your journey.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

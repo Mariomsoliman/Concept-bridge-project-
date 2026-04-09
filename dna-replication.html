@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn DNA Replication – Interactive NS + CS Learning Platform</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="page page--lesson page--dna-replication">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <h1 class="logo">Concept Bridge</h1>
+        <nav class="top-nav" aria-label="Main site navigation">
+          <a href="index.html" class="top-nav__link">Home</a>
+          <a href="ns.html" class="top-nav__link top-nav__link--active">Natural Science</a>
+          <a href="cs.html" class="top-nav__link">Computer Science</a>
+           <a href="roadmap.html" class="top-nav__link">Roadmap Explorer</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <nav class="lesson__breadcrumbs" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span>&rsaquo;</span>
+        <a href="ns.html">Natural Science</a>
+        <span>&rsaquo;</span>
+        <a href="biology.html">Biology</a>
+        <span>&rsaquo;</span>
+        <span>DNA Replication</span>
+      </nav>
+
+      <header class="lesson__header">
+        <p class="eyebrow">Biology &bull; DNA</p>
+        <h2 class="lesson__title">Learn DNA Replication</h2>
+        <p class="lesson__summary">
+          Explore how cells copy their DNA so that genetic information is passed on accurately from one
+          generation to the next.
+        </p>
+      </header>
+
+      <section class="lesson__media" aria-label="DNA replication video">
+        <div class="video-placeholder">
+          <p class="video-placeholder__label">Video lesson</p>
+          <p class="video-placeholder__text">
+            A short video or animation explaining DNA replication will appear here. For now, use this
+            page to build a clear mental picture of each step.
+          </p>
+        </div>
+      </section>
+
+      <section class="lesson__content" aria-label="DNA replication explanation sections">
+        <article class="lesson-section">
+          <h3>What is DNA replication?</h3>
+          <p>
+            DNA replication is the process of making an exact copy of a DNA molecule before a cell
+            divides. Each strand of the original double helix acts as a template for a new strand.
+          </p>
+        </article>
+
+        <article class="lesson-section">
+          <h3>Why does it matter?</h3>
+          <p>
+            Without reliable replication, cells could lose or change important genetic instructions.
+            Accurate copying keeps your traits, and the instructions inside your cells, consistent over
+            time.
+          </p>
+        </article>
+
+        <!-- Expandable steps -->
+        <article class="lesson-section lesson-step" id="step-1">
+          <button class="lesson-step__header" type="button">
+            <span class="lesson-step__label">Step 1</span>
+            <span class="lesson-step__title">DNA unwinds</span>
+            <span class="lesson-step__icon" aria-hidden="true">▾</span>
+          </button>
+          <div class="lesson-step__body">
+            <p>
+              The double helix opens up so that each strand can serve as a template. An enzyme called
+              <strong>helicase</strong> breaks the hydrogen bonds between the bases, separating the two
+              strands like unzipping a zipper.
+            </p>
+          </div>
+        </article>
+
+        <article class="lesson-section lesson-step" id="step-2">
+          <button class="lesson-step__header" type="button">
+            <span class="lesson-step__label">Step 2</span>
+            <span class="lesson-step__title">Complementary base pairing</span>
+            <span class="lesson-step__icon" aria-hidden="true">▾</span>
+          </button>
+          <div class="lesson-step__body">
+            <p>
+              New free-floating nucleotides line up with the exposed bases following the simple matching
+              rules: <strong>A pairs with T</strong>, and <strong>C pairs with G</strong>. This keeps
+              the sequence of genetic information the same.
+            </p>
+          </div>
+        </article>
+
+        <article class="lesson-section lesson-step" id="step-3">
+          <button class="lesson-step__header" type="button">
+            <span class="lesson-step__label">Step 3</span>
+            <span class="lesson-step__title">New strands form</span>
+            <span class="lesson-step__icon" aria-hidden="true">▾</span>
+          </button>
+          <div class="lesson-step__body">
+            <p>
+              Enzymes connect the new nucleotides together, forming the sugar-phosphate backbone of each
+              strand. In the end you have <strong>two DNA molecules</strong>, each with one original
+              strand and one new strand.
+            </p>
+          </div>
+        </article>
+
+        <article class="lesson-section">
+          <h3>Key enzymes involved</h3>
+          <p>
+            Important enzymes include <strong>helicase</strong> (unwinds the helix),
+            <strong>primase</strong> (lays down a short starting piece), <strong>DNA polymerase</strong>
+            (adds new nucleotides), and <strong>ligase</strong> (seals small gaps in the backbone).
+          </p>
+        </article>
+
+        <article class="lesson-section">
+          <h3>Common errors and mutations</h3>
+          <p>
+            Occasionally, mistakes happen when DNA is copied. These changes are called
+            <strong>mutations</strong>. Many are fixed or have no effect, but some can be harmful or,
+            in rare cases, helpful for evolution.
+          </p>
+        </article>
+
+        <article class="lesson-section lesson-section--connection">
+          <h3>Connection to Computer Science</h3>
+          <p>
+            DNA replication is a lot like copying data in computing. There is an input (the original
+            DNA), an output (two copies), clear step-by-step rules, and built-in error checking. These
+            ideas connect to topics like <strong>algorithms</strong> and
+            <strong>time &amp; space complexity</strong> in Computer Science.
+          </p>
+        </article>
+      </section>
+
+      <section class="lesson__quiz" aria-label="Quick quiz">
+        <h2>Quick check: Can you explain it?</h2>
+        <div class="lesson-section">
+          <p>Use these prompts to test your understanding in your own words:</p>
+          <ol>
+            <li>Describe each of the three main steps of DNA replication.</li>
+            <li>Explain why complementary base pairing is so important.</li>
+            <li>
+              Give one way DNA replication is similar to copying data in a computer (think about errors,
+              speed, or storage).
+            </li>
+          </ol>
+          <p class="muted">
+            Tip: You do not need to write perfect textbook answers. Aim for clear, simple sentences that
+            you could explain to a friend.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        &copy; 2026 Interactive NS + CS Learning Platform &mdash; Biology &middot; DNA Replication
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
