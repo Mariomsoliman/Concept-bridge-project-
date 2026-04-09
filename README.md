@@ -1,4 +1,4 @@
-# Concept Bridge (Static Prototype)
+# Concept Bridge 
 
 Concept Bridge is a small static prototype of an interactive platform that connects **Natural Science** and **Computer Science** using a unified dark design, guided roadmaps, and reusable topic content.
 
@@ -85,11 +85,4 @@ Then open:
 - `http://localhost:8015/roadmap.html` – guided Roadmap Explorer
 - `http://localhost:8015/topic.html?slug=dna-replication` – example dynamic topic
 
-Any available port (e.g. 8000, 8010, 8015) works; just update the URL accordingly.
 
-## Future ideas
-
-- Point legacy lesson pages (`dna-replication.html`, `forces-motion.html`, `complexity.html`) to `topic.html` so content lives only in `topics.json`.
-- Add real video URLs to each topic and embed them in the topic media section.
-- Expand Natural Science roadmaps to use the same detail view approach as CS.
-- Add more topics and quizzes by extending `topics.json`.
