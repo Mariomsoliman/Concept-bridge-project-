@@ -227,13 +227,6 @@ Set `NODE_ENV=development` in `.env` to see detailed logs and error messages.
 - **Gemini timeout**: If Gemini takes too long, increase the timeout in `server.js` or simplify the prompt.
 - **PubMed rate limit**: Add a short delay between requests if you're bulk-processing many topics.
 
-## Future enhancements
 
-- Cache enriched content to avoid re-fetching for every request.
-- Add support for other external APIs (Papers With Code, GitHub Discussions, Hacker News, etc.).
-- Allow frontend to specify which sources to use per-request.
-- Add support for multiple queries per topic and aggregating results.
-- Implement proper error recovery and retry logic.
-- Add database to store enriched content and topic metadata.
 
 
