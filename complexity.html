@@ -3,74 +3,101 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Learn Time &amp; Space Complexity</title>
+    <title>Learn Time & Space Complexity – Interactive NS + CS Learning Platform</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="enrichment.css" />
   </head>
-  <body>
-    <header>
-      <h1>Learn Time &amp; Space Complexity</h1>
-      <p>
-        Explore how we measure the running time and memory usage of algorithms as their inputs get
-        larger.
-      </p>
+  <body class="page page--lesson page--complexity">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <h1 class="logo">Concept Bridge</h1>
+        <nav class="top-nav" aria-label="Main site navigation">
+          <a href="index.html" class="top-nav__link">Home</a>
+          <a href="ns.html" class="top-nav__link">Natural Science</a>
+          <a href="cs.html" class="top-nav__link top-nav__link--active">Computer Science</a>
+           <a href="roadmap.html" class="top-nav__link">Roadmap Explorer</a>
+        </nav>
+      </div>
     </header>
 
     <main>
-      <section aria-label="Complexity video">
-        <h2>Video lesson (coming soon)</h2>
-        <p>
-          This section will contain an embedded video or animation that explains time and space
-          complexity with simple visuals.
-        </p>
+      <nav class="lesson__breadcrumbs" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span>&rsaquo;</span>
+        <a href="cs.html">Computer Science</a>
+        <span>&rsaquo;</span>
+        <a href="cs.html">Algorithms & Data Structures</a>
+        <span>&rsaquo;</span>
+        <span>Time & Space Complexity</span>
+      </nav>
+
+      <header class="lesson__header">
+        <p class="eyebrow">Computer Science &bull; Algorithms</p>
+        <h2 class="lesson__title">Time & Space Complexity</h2>
+      </header>
+
+      <!-- Interactive Learning Explorer powered by AI enrichment -->
+      <section class="lesson__enrichment" aria-label="Interactive learning explorer">
+        <div id="enrichment-content" class="enrichment-container"></div>
       </section>
 
-      <section>
-        <h2>What is time complexity?</h2>
-        <p>
-          Time complexity describes how the number of steps an algorithm needs grows with the size
-          of its input.
-        </p>
+      <section class="lesson__content" aria-label="Complexity explanation sections">
+
+        <article class="lesson-section lesson-section--connection">
+          <h3>Connection to Real-World Problem Solving</h3>
+          <p>
+            When you design an algorithm, you're choosing a strategy for solving a problem. Thinking about time and space complexity helps you compare different strategies and pick one that will still work when the input grows exponentially.
+          </p>
+          
+          <h4>Why This Matters in Industry</h4>
+          <p>
+            Companies like Google, Netflix, and Amazon process billions of data points daily. A small difference in algorithmic efficiency can translate to:
+            <strong>millions of dollars in server costs</strong>, <strong>milliseconds of latency for users</strong>, and <strong>the difference between a responsive app and a frustratingly slow one</strong>.
+          </p>
+          
+          <h4>Trade-offs & Decision Making</h4>
+          <p>
+            Understanding complexity helps you make informed trade-offs. Should you use more memory to save time? Is a slower algorithm acceptable if it uses significantly less memory on a phone? These decisions require knowledge of time and space complexity.
+          </p>
+          
+          <h4>Scalability & Growth</h4>
+          <p>
+            A startup might work fine with a simple O(n²) solution for 1,000 users. But what happens at 1 million users? Understanding complexity lets you predict failure points and design systems that grow with your needs.
+          </p>
+        </article>
       </section>
 
-      <section>
-        <h2>What is space complexity?</h2>
-        <p>
-          Space complexity tracks how much extra memory an algorithm needs as the input grows.
-        </p>
-      </section>
-
-      <section>
-        <h2>Why efficiency matters</h2>
-        <p>
-          Efficient algorithms save time and memory. This becomes important when working with large
-          datasets or limited devices like phones or microcontrollers.
-        </p>
-      </section>
-
-      <section aria-label="Common complexity examples">
-        <h2>Common examples: O(1), O(n), O(n^2)</h2>
-        <p>Click an example below to see a short explanation.</p>
-        <div>
-          <button type="button" class="complexity-card" data-complexity="O(1)">O(1)</button>
-          <button type="button" class="complexity-card" data-complexity="O(n)">O(n)</button>
-          <button type="button" class="complexity-card" data-complexity="O(n^2)">O(n^2)</button>
+      <section class="lesson__quiz" aria-label="Quick quiz">
+        <h2>Quick check: Can you explain it?</h2>
+        <div class="lesson-section">
+          <p>Use these prompts to test your understanding in your own words:</p>
+          <ol>
+            <li>Explain the difference between time complexity and space complexity with a real example.</li>
+            <li>Why is an O(n²) algorithm problematic for very large datasets?</li>
+            <li>
+              Describe a scenario where you might choose a slower algorithm with better space complexity over a faster algorithm that uses more memory.
+            </li>
+          </ol>
+          <p class="muted">
+            Tip: Think about how your choices would impact users and systems at scale.
+          </p>
         </div>
-        <p id="complexity-output">Pick a complexity example to see what it means.</p>
       </section>
 
-      <section>
-        <h2>Connection to problem solving</h2>
-        <p>
-          When you design an algorithm, you are choosing a strategy for solving a problem. Thinking
-          about time and space complexity helps you compare different strategies and pick one that
-          will still work when the input grows.
-        </p>
-      </section>
     </main>
 
-    <footer>
-      <p>&copy; 2026 Interactive NS + CS Learning Platform</p>
+    <footer class="site-footer">
+      <p>
+        &copy; 2026 Interactive NS + CS Learning Platform &mdash; Computer Science &middot; Time & Space Complexity
+      </p>
     </footer>
+
     <script src="script.js"></script>
+    <script type="module">
+      import { loadEnrichment } from './enrichment-loader.js';
+      
+      // Load enrichment content from the complexity endpoint
+      loadEnrichment('enrichment-content', 'http://localhost:3000/api/demo/complexity');
+    </script>
   </body>
 </html>

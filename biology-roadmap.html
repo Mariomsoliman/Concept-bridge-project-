@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biology Foundations Roadmap – Concept Bridge</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="enrichment.css" />
+    <style>
+      .roadmap-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      .roadmap-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .roadmap-header h2 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        color: var(--text-main);
+      }
+
+      .roadmap-header p {
+        color: var(--text-muted);
+        font-size: 1.1rem;
+      }
+
+      .roadmap-phases {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+
+      .roadmap-phase {
+        background: linear-gradient(135deg, rgba(123, 255, 179, 0.1), rgba(79, 179, 255, 0.1));
+        border: 1px solid rgba(123, 255, 179, 0.2);
+        border-radius: 12px;
+        padding: 1.5rem;
+        transition: all 0.3s ease;
+      }
+
+      .roadmap-phase:hover {
+        transform: translateY(-4px);
+        border-color: rgba(123, 255, 179, 0.4);
+        box-shadow: 0 8px 24px rgba(123, 255, 179, 0.1);
+      }
+
+      .roadmap-phase__number {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135deg, #7bffb3, #4fb3ff);
+        color: #0f172a;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+      }
+
+      .roadmap-phase__title {
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-bottom: 0.8rem;
+        color: var(--text-main);
+      }
+
+      .roadmap-phase__description {
+        color: var(--text-muted);
+        margin-bottom: 1.2rem;
+        line-height: 1.6;
+      }
+
+      .roadmap-phase__topics {
+        list-style: none;
+        padding: 0;
+      }
+
+      .roadmap-phase__topic {
+        padding: 0.6rem 0;
+        padding-left: 1.5rem;
+        position: relative;
+        color: var(--text-main);
+        font-size: 0.95rem;
+      }
+
+      .roadmap-phase__topic:before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: #7bffb3;
+        font-weight: bold;
+      }
+
+      .roadmap-phase__link {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: 0.6rem 1.2rem;
+        background: rgba(123, 255, 179, 0.1);
+        border: 1px solid rgba(123, 255, 179, 0.3);
+        border-radius: 6px;
+        color: #7bffb3;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-weight: 500;
+      }
+
+      .roadmap-phase__link:hover {
+        background: rgba(123, 255, 179, 0.2);
+        border-color: #7bffb3;
+      }
+
+      .roadmap-timeline {
+        margin-top: 3rem;
+        padding: 2rem;
+        background: rgba(123, 255, 179, 0.05);
+        border-left: 4px solid #7bffb3;
+        border-radius: 8px;
+      }
+
+      .roadmap-timeline h3 {
+        margin-bottom: 1.5rem;
+        color: var(--text-main);
+      }
+
+      .timeline-item {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid rgba(123, 255, 179, 0.1);
+      }
+
+      .timeline-item:last-child {
+        border-bottom: none;
+      }
+
+      .timeline-item strong {
+        color: #7bffb3;
+      }
+
+      .roadmap-connections {
+        margin-top: 3rem;
+        padding: 2rem;
+        background: rgba(79, 179, 255, 0.05);
+        border-radius: 8px;
+      }
+
+      .roadmap-connections h3 {
+        margin-bottom: 1rem;
+        color: var(--text-main);
+      }
+
+      .connections-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .connection-card {
+        padding: 1.2rem;
+        background: rgba(79, 179, 255, 0.1);
+        border: 1px solid rgba(79, 179, 255, 0.2);
+        border-radius: 6px;
+        color: var(--text-main);
+      }
+
+      .connection-card strong {
+        color: #4fb3ff;
+      }
+    </style>
+  </head>
+  <body class="page page--biology-roadmap">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <h1 class="logo">Concept Bridge</h1>
+        <nav class="top-nav" aria-label="Main site navigation">
+          <a href="index.html" class="top-nav__link">Home</a>
+          <a href="ns.html" class="top-nav__link top-nav__link--active">Natural Science</a>
+          <a href="cs.html" class="top-nav__link">Computer Science</a>
+          <a href="roadmap.html" class="top-nav__link">Roadmap Explorer</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <nav class="lesson__breadcrumbs" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span>&rsaquo;</span>
+        <a href="ns.html">Natural Science</a>
+        <span>&rsaquo;</span>
+        <a href="biology.html">Biology</a>
+        <span>&rsaquo;</span>
+        <span>Foundations Roadmap</span>
+      </nav>
+
+      <div class="roadmap-container">
+        <div class="roadmap-header">
+          <p class="eyebrow">Learning Path</p>
+          <h2>🧬 Biology Foundations Roadmap</h2>
+          <p>A comprehensive guided path to master foundational biology concepts from basics to advanced applications.</p>
+        </div>
+
+        <div class="roadmap-phases">
+          <!-- Phase 1: Cellular Basics -->
+          <div class="roadmap-phase">
+            <div class="roadmap-phase__number">1</div>
+            <h3 class="roadmap-phase__title">Cellular Basics</h3>
+            <p class="roadmap-phase__description">
+              Start with the fundamental unit of life: the cell. Understand cellular structures, organelles, and how cells function.
+            </p>
+            <ul class="roadmap-phase__topics">
+              <li class="roadmap-phase__topic">Cell theory and types (prokaryotic vs eukaryotic)</li>
+              <li class="roadmap-phase__topic">Organelles and their functions</li>
+              <li class="roadmap-phase__topic">Cell membrane structure and transport</li>
+              <li class="roadmap-phase__topic">Cell cycle and division (mitosis & meiosis)</li>
+            </ul>
+            <a href="biology.html" class="roadmap-phase__link">Explore Cells</a>
+          </div>
+
+          <!-- Phase 2: Genetics & DNA -->
+          <div class="roadmap-phase">
+            <div class="roadmap-phase__number">2</div>
+            <h3 class="roadmap-phase__title">Genetics & DNA</h3>
+            <p class="roadmap-phase__description">
+              Learn how genetic information is stored, replicated, and expressed. The foundation of heredity and evolution.
+            </p>
+            <ul class="roadmap-phase__topics">
+              <li class="roadmap-phase__topic">DNA structure and nucleotides</li>
+              <li class="roadmap-phase__topic">DNA replication (semi-conservative)</li>
+              <li class="roadmap-phase__topic">Gene expression and protein synthesis</li>
+              <li class="roadmap-phase__topic">Mendelian genetics and inheritance patterns</li>
+            </ul>
+            <a href="dna-replication.html" class="roadmap-phase__link">Learn DNA Replication</a>
+          </div>
+
+          <!-- Phase 3: Molecular Biology -->
+          <div class="roadmap-phase">
+            <div class="roadmap-phase__number">3</div>
+            <h3 class="roadmap-phase__title">Molecular Biology</h3>
+            <p class="roadmap-phase__description">
+              Dive into the molecular mechanisms that drive life. Understand enzymes, reactions, and cellular processes.
+            </p>
+            <ul class="roadmap-phase__topics">
+              <li class="roadmap-phase__topic">Proteins: structure, function, and synthesis</li>
+              <li class="roadmap-phase__topic">Enzymes and catalysis</li>
+              <li class="roadmap-phase__topic">Metabolic pathways (glycolysis, Krebs cycle)</li>
+              <li class="roadmap-phase__topic">Photosynthesis and cellular respiration</li>
+            </ul>
+            <a href="#" class="roadmap-phase__link">Coming Soon</a>
+          </div>
+
+          <!-- Phase 4: Organism Level -->
+          <div class="roadmap-phase">
+            <div class="roadmap-phase__number">4</div>
+            <h3 class="roadmap-phase__title">Organism Level Biology</h3>
+            <p class="roadmap-phase__description">
+              Scale up to understand how organisms function as integrated systems. Tissues, organs, and systems.
+            </p>
+            <ul class="roadmap-phase__topics">
+              <li class="roadmap-phase__topic">Tissue organization and specialization</li>
+              <li class="roadmap-phase__topic">Major organ systems (nervous, circulatory, digestive)</li>
+              <li class="roadmap-phase__topic">Homeostasis and regulation</li>
+              <li class="roadmap-phase__topic">Anatomy and physiology connections</li>
+            </ul>
+            <a href="#" class="roadmap-phase__link">Coming Soon</a>
+          </div>
+
+          <!-- Phase 5: Ecology & Evolution -->
+          <div class="roadmap-phase">
+            <div class="roadmap-phase__number">5</div>
+            <h3 class="roadmap-phase__title">Ecology & Evolution</h3>
+            <p class="roadmap-phase__description">
+              Understand populations, ecosystems, and the mechanisms of evolution that shaped all life.
+            </p>
+            <ul class="roadmap-phase__topics">
+              <li class="roadmap-phase__topic">Natural selection and adaptation</li>
+              <li class="roadmap-phase__topic">Population dynamics and genetics</li>
+              <li class="roadmap-phase__topic">Ecosystems and energy flow</li>
+              <li class="roadmap-phase__topic">Biodiversity and conservation</li>
+            </ul>
+            <a href="#" class="roadmap-phase__link">Coming Soon</a>
+          </div>
+
+          <!-- Phase 6: Advanced Applications -->
+          <div class="roadmap-phase">
+            <div class="roadmap-phase__number">6</div>
+            <h3 class="roadmap-phase__title">Advanced Applications</h3>
+            <p class="roadmap-phase__description">
+              Apply biology knowledge to real-world challenges: medicine, biotechnology, and bioethics.
+            </p>
+            <ul class="roadmap-phase__topics">
+              <li class="roadmap-phase__topic">CRISPR and genetic engineering</li>
+              <li class="roadmap-phase__topic">Immunology and vaccine development</li>
+              <li class="roadmap-phase__topic">Cancer biology and treatment</li>
+              <li class="roadmap-phase__topic">Bioethics and emerging technologies</li>
+            </ul>
+            <a href="#" class="roadmap-phase__link">Coming Soon</a>
+          </div>
+        </div>
+
+        <!-- Timeline Section -->
+        <div class="roadmap-timeline">
+          <h3>📅 Suggested Learning Timeline</h3>
+          <div class="timeline-item">
+            <strong>Week 1-2:</strong> Cellular Basics - Master the fundamentals of cell structure and function. This is the foundation for everything that follows.
+          </div>
+          <div class="timeline-item">
+            <strong>Week 3-4:</strong> Genetics & DNA - Build on your cellular knowledge to understand how genetic information works at the molecular level.
+          </div>
+          <div class="timeline-item">
+            <strong>Week 5-6:</strong> Molecular Biology - Understand the chemical processes that drive life. Challenging but essential.
+          </div>
+          <div class="timeline-item">
+            <strong>Week 7-8:</strong> Organism Level Biology - Synthesize lower-level knowledge into understanding integrated living systems.
+          </div>
+          <div class="timeline-item">
+            <strong>Week 9-10:</strong> Ecology & Evolution - Put it all together to understand populations, ecosystems, and how life changes over time.
+          </div>
+          <div class="timeline-item">
+            <strong>Week 11-12:</strong> Advanced Applications - Apply everything you've learned to cutting-edge biology research and real-world problems.
+          </div>
+        </div>
+
+        <!-- Connections Section -->
+        <div class="roadmap-connections">
+          <h3>🔗 Biology Connections to Other Fields</h3>
+          <div class="connections-grid">
+            <div class="connection-card">
+              <strong>Chemistry:</strong> Understanding molecular bonding, reactions, and equilibrium is essential for biology. Every biological process is chemistry.
+            </div>
+            <div class="connection-card">
+              <strong>Physics:</strong> Energy, forces, and thermodynamics apply to biological systems. Photosynthesis is physics-based energy conversion.
+            </div>
+            <div class="connection-card">
+              <strong>Computer Science:</strong> Bioinformatics uses algorithms to analyze DNA sequences. AI is revolutionizing drug discovery.
+            </div>
+            <div class="connection-card">
+              <strong>Mathematics:</strong> Population modeling, statistical analysis of data, and complexity analysis all require strong math skills.
+            </div>
+            <div class="connection-card">
+              <strong>Medicine:</strong> Understanding pathology, pharmacology, and human physiology directly applies to treating disease.
+            </div>
+            <div class="connection-card">
+              <strong>Environmental Science:</strong> Ecology and evolutionary biology are essential for understanding climate change and conservation.
+            </div>
+          </div>
+        </div>
+
+        <!-- Key Principles Section -->
+        <section class="lesson__content" style="margin-top: 3rem;">
+          <article class="lesson-section">
+            <h3>Core Principles That Unite Biology</h3>
+            <p>
+              As you progress through this roadmap, keep these unifying principles in mind:
+            </p>
+            <ul>
+              <li><strong>Evolution by natural selection:</strong> The framework for understanding all biodiversity and how organisms adapt.</li>
+              <li><strong>Energy flow:</strong> Life depends on capturing, storing, and transferring energy through chemical bonds.</li>
+              <li><strong>Information transfer:</strong> DNA carries hereditary information; it's replicated, expressed, and mutated to drive change.</li>
+              <li><strong>Homeostasis:</strong> Living systems maintain stable internal conditions despite external changes.</li>
+              <li><strong>Organization:</strong> Biology is hierarchical: molecules → cells → tissues → organs → organisms → ecosystems.</li>
+              <li><strong>Systems thinking:</strong> Life is interconnected; changes in one part ripple through the whole system.</li>
+            </ul>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        &copy; 2026 Interactive NS + CS Learning Platform &mdash; Biology &middot; Foundations Roadmap
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

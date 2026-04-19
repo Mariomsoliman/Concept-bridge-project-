@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python Learning Roadmap – Concept Bridge</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="enrichment.css" />
+    <style>
+      .roadmap-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      .roadmap-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .roadmap-header h2 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        color: var(--text-main);
+      }
+
+      .roadmap-header p {
+        color: var(--text-muted);
+        font-size: 1.1rem;
+      }
+
+      .roadmap-phases {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+
+      .roadmap-phase {
+        background: linear-gradient(135deg, rgba(79, 179, 255, 0.1), rgba(123, 255, 179, 0.1));
+        border: 1px solid rgba(79, 179, 255, 0.2);
+        border-radius: 12px;
+        padding: 1.5rem;
+        transition: all 0.3s ease;
+      }
+
+      .roadmap-phase:hover {
+        transform: translateY(-4px);
+        border-color: rgba(79, 179, 255, 0.4);
+        box-shadow: 0 8px 24px rgba(79, 179, 255, 0.1);
+      }
+
+      .roadmap-phase__number {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135deg, #4fb3ff, #7bffb3);
+        color: #0f172a;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+      }
+
+      .roadmap-phase__title {
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-bottom: 0.8rem;
+        color: var(--text-main);
+      }
+
+      .roadmap-phase__description {
+        color: var(--text-muted);
+        margin-bottom: 1.2rem;
+        line-height: 1.6;
+      }
+
+      .roadmap-phase__topics {
+        list-style: none;
+        padding: 0;
+      }
+
+      .roadmap-phase__topic {
+        padding: 0.6rem 0;
+        padding-left: 1.5rem;
+        position: relative;
+        color: var(--text-main);
+        font-size: 0.95rem;
+      }
+
+      .roadmap-phase__topic:before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: #4fb3ff;
+        font-weight: bold;
+      }
+
+      .roadmap-phase__link {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: 0.6rem 1.2rem;
+        background: rgba(79, 179, 255, 0.1);
+        border: 1px solid rgba(79, 179, 255, 0.3);
+        border-radius: 6px;
+        color: #4fb3ff;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-weight: 500;
+      }
+
+      .roadmap-phase__link:hover {
+        background: rgba(79, 179, 255, 0.2);
+        border-color: #4fb3ff;
+      }
+
+      .roadmap-timeline {
+        margin-top: 3rem;
+        padding: 2rem;
+        background: rgba(79, 179, 255, 0.05);
+        border-left: 4px solid #4fb3ff;
+        border-radius: 8px;
+      }
+
+      .roadmap-timeline h3 {
+        margin-bottom: 1.5rem;
+        color: var(--text-main);
+      }
+
+      .timeline-item {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid rgba(79, 179, 255, 0.1);
+      }
+
+      .timeline-item:last-child {
+        border-bottom: none;
+      }
+
+      .timeline-item strong {
+        color: #4fb3ff;
+      }
+
+      .roadmap-connections {
+        margin-top: 3rem;
+        padding: 2rem;
+        background: rgba(79, 179, 255, 0.05);
+        border-radius: 8px;
+      }
+
+      .roadmap-connections h3 {
+        margin-bottom: 1rem;
+        color: var(--text-main);
+      }
+
+      .connections-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .connection-card {
+        padding: 1.2rem;
+        background: rgba(79, 179, 255, 0.1);
+        border: 1px solid rgba(79, 179, 255, 0.2);
+        border-radius: 6px;
+        color: var(--text-main);
+      }
+
+      .connection-card strong {
+        color: #4fb3ff;
+      }
+    </style>
+  </head>
+  <body class="page page--python-roadmap">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <h1 class="logo">Concept Bridge</h1>
+        <nav class="top-nav" aria-label="Main site navigation">
+          <a href="index.html" class="top-nav__link">Home</a>
+          <a href="ns.html" class="top-nav__link">Natural Science</a>
+          <a href="cs.html" class="top-nav__link top-nav__link--active">Computer Science</a>
+          <a href="roadmap.html" class="top-nav__link">Roadmap Explorer</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <nav class="lesson__breadcrumbs" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span>&rsaquo;</span>
+        <a href="cs.html">Computer Science</a>
+        <span>&rsaquo;</span>
+        <a href="roadmap.html">Roadmap Explorer</a>
+        <span>&rsaquo;</span>
+        <span>Python Skill Roadmap</span>
+      </nav>
+
+      <div class="roadmap-container">
+        <div class="roadmap-header">
+          <p class="eyebrow">Skill-Based Learning Path</p>
+          <h2>🐍 Master Python: From Beginner to Expert</h2>
+          <p>A comprehensive guided path to master Python programming, from basic syntax to advanced frameworks and real-world applications.</p>
+        </div>
+
+        <div class="roadmap-phases">
+          <!-- Phase 1: Python Fundamentals -->
+          <div class="roadmap-phase">
+            <div class="roadmap-phase__number">1</div>
+            <h3 class="roadmap-phase__title">Python Fundamentals</h3>
+            <p class="roadmap-phase__description">
+              Start with the basics. Variables, data types, control flow, and functions form the foundation of all Python programs.
+            </p>
+            <ul class="roadmap-phase__topics">
+              <li class="roadmap-phase__topic">Syntax, variables, and data types</li>
+              <li class="roadmap-phase__topic">Operators and expressions</li>
+              <li class="roadmap-phase__topic">Control flow (if/elif/else, loops)</li>
+              <li class="roadmap-phase__topic">Functions and scope</li>
+              <li class="roadmap-phase__topic">Built-in functions and modules</li>
+            </ul>
+            <a href="#" class="roadmap-phase__link">Coming Soon</a>
+          </div>
+
+          <!-- Phase 2: Data Structures & Collections -->
+          <div class="roadmap-phase">
+            <div class="roadmap-phase__number">2</div>
+            <h3 class="roadmap-phase__title">Data Structures</h3>
+            <p class="roadmap-phase__description">
+              Master lists, dictionaries, sets, and tuples. Understand time/space complexity and when to use each structure.
+            </p>
+            <ul class="roadmap-phase__topics">
+              <li class="roadmap-phase__topic">Lists, tuples, and unpacking</li>
+              <li class="roadmap-phase__topic">Dictionaries and key-value operations</li>
+              <li class="roadmap-phase__topic">Sets and their properties</li>
+              <li class="roadmap-phase__topic">Comprehensions (list, dict, set)</li>
+              <li class="roadmap-phase__topic">Time & Space Complexity analysis</li>
+            </ul>
+            <a href="complexity.html" class="roadmap-phase__link">Learn Complexity</a>
+          </div>
+
+          <!-- Phase 3: Object-Oriented Programming -->
+          <div class="roadmap-phase">
+            <div class="roadmap-phase__number">3</div>
+            <h3 class="roadmap-phase__title">Object-Oriented Programming</h3>
+            <p class="roadmap-phase__description">
+              Classes, objects, inheritance, and polymorphism. Learn to write reusable, maintainable code with OOP principles.
+            </p>
+            <ul class="roadmap-phase__topics">
+              <li class="roadmap-phase__topic">Classes and objects</li>
+              <li class="roadmap-phase__topic">Inheritance and polymorphism</li>
+              <li class="roadmap-phase__topic">Encapsulation and abstraction</li>
+              <li class="roadmap-phase__topic">Special methods (__init__, __str__, etc.)</li>
+              <li class="roadmap-phase__topic">Design patterns in Python</li>
+            </ul>
+            <a href="#" class="roadmap-phase__link">Coming Soon</a>
+          </div>
+
+          <!-- Phase 4: Functional Programming & Advanced -->
+          <div class="roadmap-phase">
+            <div class="roadmap-phase__number">4</div>
+            <h3 class="roadmap-phase__title">Functional & Advanced</h3>
+            <p class="roadmap-phase__description">
+              Lambda functions, map/filter/reduce, decorators, and generators. Write elegant, Pythonic code.
+            </p>
+            <ul class="roadmap-phase__topics">
+              <li class="roadmap-phase__topic">Lambda functions and functional tools</li>
+              <li class="roadmap-phase__topic">Decorators and metaprogramming</li>
+              <li class="roadmap-phase__topic">Generators and iterators</li>
+              <li class="roadmap-phase__topic">Context managers (with statements)</li>
+              <li class="roadmap-phase__topic">Async/await and concurrency</li>
+            </ul>
+            <a href="#" class="roadmap-phase__link">Coming Soon</a>
+          </div>
+
+          <!-- Phase 5: Working with Data & Algorithms -->
+          <div class="roadmap-phase">
+            <div class="roadmap-phase__number">5</div>
+            <h3 class="roadmap-phase__title">Data & Algorithms</h3>
+            <p class="roadmap-phase__description">
+              Sorting, searching, and algorithmic problem-solving. Essential for coding interviews and real-world applications.
+            </p>
+            <ul class="roadmap-phase__topics">
+              <li class="roadmap-phase__topic">Sorting algorithms (bubble, merge, quick)</li>
+              <li class="roadmap-phase__topic">Searching and binary search</li>
+              <li class="roadmap-phase__topic">Trees, graphs, and traversal</li>
+              <li class="roadmap-phase__topic">Dynamic programming</li>
+              <li class="roadmap-phase__topic">Problem-solving strategies</li>
+            </ul>
+            <a href="#" class="roadmap-phase__link">Coming Soon</a>
+          </div>
+
+          <!-- Phase 6: Libraries & Real-World Applications -->
+          <div class="roadmap-phase">
+            <div class="roadmap-phase__number">6</div>
+            <h3 class="roadmap-phase__title">Libraries & Applications</h3>
+            <p class="roadmap-phase__description">
+              NumPy, Pandas, Django, Flask, Requests. Build real applications and work with data at scale.
+            </p>
+            <ul class="roadmap-phase__topics">
+              <li class="roadmap-phase__topic">NumPy for numerical computing</li>
+              <li class="roadmap-phase__topic">Pandas for data analysis</li>
+              <li class="roadmap-phase__topic">Flask/Django for web development</li>
+              <li class="roadmap-phase__topic">Requests and API integration</li>
+              <li class="roadmap-phase__topic">Testing and debugging</li>
+            </ul>
+            <a href="#" class="roadmap-phase__link">Coming Soon</a>
+          </div>
+        </div>
+
+        <!-- Timeline Section -->
+        <div class="roadmap-timeline">
+          <h3>📅 Suggested Learning Timeline</h3>
+          <div class="timeline-item">
+            <strong>Week 1-2:</strong> Python Fundamentals - Master syntax, variables, and basic control flow. Write simple programs and get comfortable with the language.
+          </div>
+          <div class="timeline-item">
+            <strong>Week 3-4:</strong> Data Structures - Understand lists, dicts, sets, and their performance characteristics. This unlocks algorithmic thinking.
+          </div>
+          <div class="timeline-item">
+            <strong>Week 5-6:</strong> Object-Oriented Programming - Learn to design classes and write reusable code. Critical for larger projects.
+          </div>
+          <div class="timeline-item">
+            <strong>Week 7-8:</strong> Functional & Advanced - Decorators, generators, and async. Elevate your Python skills to expert level.
+          </div>
+          <div class="timeline-item">
+            <strong>Week 9-10:</strong> Data & Algorithms - Practice problem-solving. Understand sorting, searching, and graph algorithms.
+          </div>
+          <div class="timeline-item">
+            <strong>Week 11-12:</strong> Libraries & Applications - Apply your knowledge to real projects. Build web apps, analyze data, and create production-ready code.
+          </div>
+        </div>
+
+        <!-- Connections Section -->
+        <div class="roadmap-connections">
+          <h3>🔗 Python's Role in Computer Science</h3>
+          <div class="connections-grid">
+            <div class="connection-card">
+              <strong>Data Science:</strong> NumPy, Pandas, Scikit-learn, and Matplotlib make Python the #1 language for data analysis and machine learning.
+            </div>
+            <div class="connection-card">
+              <strong>Web Development:</strong> Django and Flask power millions of web applications. Learn backend development with Python.
+            </div>
+            <div class="connection-card">
+              <strong>Automation:</strong> Python excels at scripting and automation. Write scripts to automate repetitive tasks.
+            </div>
+            <div class="connection-card">
+              <strong>AI & Machine Learning:</strong> TensorFlow, PyTorch, and OpenAI APIs use Python. Leading language for AI development.
+            </div>
+            <div class="connection-card">
+              <strong>Scientific Computing:</strong> Physics, biology, and chemistry research uses Python for simulations and data analysis.
+            </div>
+            <div class="connection-card">
+              <strong>DevOps & System Administration:</strong> Manage servers, deployments, and infrastructure with Python scripts.
+            </div>
+          </div>
+        </div>
+
+        <!-- Key Principles Section -->
+        <section class="lesson__content" style="margin-top: 3rem;">
+          <article class="lesson-section">
+            <h3>Core Python Principles</h3>
+            <p>
+              As you progress through this roadmap, embrace these Pythonic principles:
+            </p>
+            <ul>
+              <li><strong>Readability counts:</strong> "Beautiful is better than ugly." Write code that's easy to understand.</li>
+              <li><strong>Simplicity:</strong> "Simple is better than complex." Prefer straightforward solutions over clever tricks.</li>
+              <li><strong>Explicit over implicit:</strong> Make your intentions clear in your code. Avoid magic and hidden behavior.</li>
+              <li><strong>One obvious way:</strong> There should usually be one way to do something (but not always). Use idioms.</li>
+              <li><strong>Batteries included:</strong> Python's standard library is powerful. Use existing tools before writing your own.</li>
+              <li><strong>Community matters:</strong> Python thrives because of its community. Learn from others, share your code.</li>
+            </ul>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        &copy; 2026 Interactive NS + CS Learning Platform &mdash; Computer Science &middot; Python Roadmap
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

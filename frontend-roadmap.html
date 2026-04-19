@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Engineer Roadmap – Concept Bridge</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="enrichment.css" />
+    <style>
+      .roadmap-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      .roadmap-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .roadmap-header h2 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        color: var(--text-main);
+      }
+
+      .roadmap-header p {
+        color: var(--text-muted);
+        font-size: 1.1rem;
+      }
+
+      .roadmap-phases {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+
+      .roadmap-phase {
+        background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(79, 179, 255, 0.1));
+        border: 1px solid rgba(255, 215, 0, 0.2);
+        border-radius: 12px;
+        padding: 1.5rem;
+        transition: all 0.3s ease;
+      }
+
+      .roadmap-phase:hover {
+        transform: translateY(-4px);
+        border-color: rgba(255, 215, 0, 0.4);
+        box-shadow: 0 8px 24px rgba(255, 215, 0, 0.1);
+      }
+
+      .roadmap-phase__number {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135deg, #ffd700, #4fb3ff);
+        color: #0f172a;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+      }
+
+      .roadmap-phase__title {
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-bottom: 0.8rem;
+        color: var(--text-main);
+      }
+
+      .roadmap-phase__description {
+        color: var(--text-muted);
+        margin-bottom: 1.2rem;
+        line-height: 1.6;
+      }
+
+      .roadmap-phase__topics {
+        list-style: none;
+        padding: 0;
+      }
+
+      .roadmap-phase__topic {
+        padding: 0.6rem 0;
+        padding-left: 1.5rem;
+        position: relative;
+        color: var(--text-main);
+        font-size: 0.95rem;
+      }
+
+      .roadmap-phase__topic:before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: #ffd700;
+        font-weight: bold;
+      }
+
+      .roadmap-phase__link {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: 0.6rem 1.2rem;
+        background: rgba(255, 215, 0, 0.1);
+        border: 1px solid rgba(255, 215, 0, 0.3);
+        border-radius: 6px;
+        color: #ffd700;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-weight: 500;
+      }
+
+      .roadmap-phase__link:hover {
+        background: rgba(255, 215, 0, 0.2);
+        border-color: #ffd700;
+      }
+
+      .roadmap-timeline {
+        margin-top: 3rem;
+        padding: 2rem;
+        background: rgba(255, 215, 0, 0.05);
+        border-left: 4px solid #ffd700;
+        border-radius: 8px;
+      }
+
+      .roadmap-timeline h3 {
+        margin-bottom: 1.5rem;
+        color: var(--text-main);
+      }
+
+      .timeline-item {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+      }
+
+      .timeline-item:last-child {
+        border-bottom: none;
+      }
+
+      .timeline-item strong {
+        color: #ffd700;
+      }
+
+      .roadmap-connections {
+        margin-top: 3rem;
+        padding: 2rem;
+        background: rgba(255, 215, 0, 0.05);
+        border-radius: 8px;
+      }
+
+      .roadmap-connections h3 {
+        margin-bottom: 1rem;
+        color: var(--text-main);
+      }
+
+      .connections-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .connection-card {
+        padding: 1.2rem;
+        background: rgba(255, 215, 0, 0.1);
+        border: 1px solid rgba(255, 215, 0, 0.2);
+        border-radius: 6px;
+        color: var(--text-main);
+      }
+
+      .connection-card strong {
+        color: #ffd700;
+      }
+    </style>
+  </head>
+  <body class="page page--frontend-roadmap">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <h1 class="logo">Concept Bridge</h1>
+        <nav class="top-nav" aria-label="Main site navigation">
+          <a href="index.html" class="top-nav__link">Home</a>
+          <a href="ns.html" class="top-nav__link">Natural Science</a>
+          <a href="cs.html" class="top-nav__link top-nav__link--active">Computer Science</a>
+          <a href="roadmap.html" class="top-nav__link">Roadmap Explorer</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <nav class="lesson__breadcrumbs" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span>&rsaquo;</span>
+        <a href="cs.html">Computer Science</a>
+        <span>&rsaquo;</span>
+        <a href="roadmap.html">Roadmap Explorer</a>
+        <span>&rsaquo;</span>
+        <span>Frontend Engineer Roadmap</span>
+      </nav>
+
+      <div class="roadmap-container">
+        <div class="roadmap-header">
+          <p class="eyebrow">Role-Based Learning Path</p>
+          <h2>💻 Become a Frontend Engineer: HTML to React</h2>
+          <p>A comprehensive roadmap to master frontend web development, from HTML/CSS basics to modern React applications and professional practices.</p>
+        </div>
+
+        <div class="roadmap-phases">
+          <!-- Phase 1: Web Fundamentals -->
+          <div class="roadmap-phase">
+            <div class="roadmap-phase__number">1</div>
+            <h3 class="roadmap-phase__title">Web Fundamentals</h3>
+            <p class="roadmap-phase__description">
+              Start with the foundation: HTML for structure, CSS for styling. Understand how the web works and create static websites.
+            </p>
+            <ul class="roadmap-phase__topics">
+              <li class="roadmap-phase__topic">HTML5 semantic markup and structure</li>
+              <li class="roadmap-phase__topic">CSS fundamentals: selectors, box model, layout</li>
+              <li class="roadmap-phase__topic">Flexbox and CSS Grid layouts</li>
+              <li class="roadmap-phase__topic">Responsive design and mobile-first</li>
+              <li class="roadmap-phase__topic">Web accessibility (a11y) basics</li>
+            </ul>
+            <a href="#" class="roadmap-phase__link">Coming Soon</a>
+          </div>
+
+          <!-- Phase 2: JavaScript Fundamentals -->
+          <div class="roadmap-phase">
+            <div class="roadmap-phase__number">2</div>
+            <h3 class="roadmap-phase__title">JavaScript Fundamentals</h3>
+            <p class="roadmap-phase__description">
+              Learn JavaScript: the language of the web. Variables, functions, DOM manipulation, and interactivity.
+            </p>
+            <ul class="roadmap-phase__topics">
+              <li class="roadmap-phase__topic">Variables, data types, and operators</li>
+              <li class="roadmap-phase__topic">Functions and scope</li>
+              <li class="roadmap-phase__topic">DOM manipulation and events</li>
+              <li class="roadmap-phase__topic">Async JavaScript (callbacks, promises)</li>
+              <li class="roadmap-phase__topic">ES6+ features (arrow functions, destructuring)</li>
+            </ul>
+            <a href="#" class="roadmap-phase__link">Coming Soon</a>
+          </div>
+
+          <!-- Phase 3: Advanced JavaScript & DOM -->
+          <div class="roadmap-phase">
+            <div class="roadmap-phase__number">3</div>
+            <h3 class="roadmap-phase__title">Advanced JavaScript</h3>
+            <p class="roadmap-phase__description">
+              Master closures, prototypes, async/await, and fetch APIs. Build complex interactive applications.
+            </p>
+            <ul class="roadmap-phase__topics">
+              <li class="roadmap-phase__topic">Closures and higher-order functions</li>
+              <li class="roadmap-phase__topic">Prototypal inheritance and classes</li>
+              <li class="roadmap-phase__topic">Async/await and promise chains</li>
+              <li class="roadmap-phase__topic">Fetch API and AJAX</li>
+              <li class="roadmap-phase__topic">Error handling and debugging</li>
+            </ul>
+            <a href="#" class="roadmap-phase__link">Coming Soon</a>
+          </div>
+
+          <!-- Phase 4: Modern Frontend Tools -->
+          <div class="roadmap-phase">
+            <div class="roadmap-phase__number">4</div>
+            <h3 class="roadmap-phase__title">Modern Tools & Build Systems</h3>
+            <p class="roadmap-phase__description">
+              Webpack, npm, package management. Learn how modern frontend development actually works in production.
+            </p>
+            <ul class="roadmap-phase__topics">
+              <li class="roadmap-phase__topic">npm and package management</li>
+              <li class="roadmap-phase__topic">Webpack and module bundling</li>
+              <li class="roadmap-phase__topic">Babel and transpilation</li>
+              <li class="roadmap-phase__topic">Version control with Git</li>
+              <li class="roadmap-phase__topic">Development servers and hot reloading</li>
+            </ul>
+            <a href="complexity.html" class="roadmap-phase__link">Learn Complexity</a>
+          </div>
+
+          <!-- Phase 5: React & State Management -->
+          <div class="roadmap-phase">
+            <div class="roadmap-phase__number">5</div>
+            <h3 class="roadmap-phase__title">React Fundamentals</h3>
+            <p class="roadmap-phase__description">
+              Components, JSX, hooks, and state management. Build modern, maintainable web applications with React.
+            </p>
+            <ul class="roadmap-phase__topics">
+              <li class="roadmap-phase__topic">React components and JSX</li>
+              <li class="roadmap-phase__topic">Props and state management</li>
+              <li class="roadmap-phase__topic">Hooks (useState, useEffect, useContext)</li>
+              <li class="roadmap-phase__topic">Component lifecycle and optimization</li>
+              <li class="roadmap-phase__topic">Routing with React Router</li>
+            </ul>
+            <a href="#" class="roadmap-phase__link">Coming Soon</a>
+          </div>
+
+          <!-- Phase 6: Advanced React & Production -->
+          <div class="roadmap-phase">
+            <div class="roadmap-phase__number">6</div>
+            <h3 class="roadmap-phase__title">Advanced & Production Skills</h3>
+            <p class="roadmap-phase__description">
+              Redux/Context, testing, performance optimization, and deployment. Deploy professional React applications.
+            </p>
+            <ul class="roadmap-phase__topics">
+              <li class="roadmap-phase__topic">State management (Redux, Context API)</li>
+              <li class="roadmap-phase__topic">Testing (Jest, React Testing Library)</li>
+              <li class="roadmap-phase__topic">Performance optimization</li>
+              <li class="roadmap-phase__topic">API integration and error handling</li>
+              <li class="roadmap-phase__topic">Deployment and CI/CD</li>
+            </ul>
+            <a href="#" class="roadmap-phase__link">Coming Soon</a>
+          </div>
+        </div>
+
+        <!-- Timeline Section -->
+        <div class="roadmap-timeline">
+          <h3>📅 Suggested Learning Timeline (12-16 weeks)</h3>
+          <div class="timeline-item">
+            <strong>Week 1-2:</strong> Web Fundamentals - HTML & CSS. Build static websites and understand responsive design. Master layout with Flexbox and Grid.
+          </div>
+          <div class="timeline-item">
+            <strong>Week 3-4:</strong> JavaScript Fundamentals - Variables, functions, DOM manipulation. Make your websites interactive.
+          </div>
+          <div class="timeline-item">
+            <strong>Week 5-6:</strong> Advanced JavaScript - Closures, async/await, fetch APIs. Handle complex interactions and API calls.
+          </div>
+          <div class="timeline-item">
+            <strong>Week 7-8:</strong> Modern Tools - npm, Webpack, Git. Learn how real projects are structured and deployed.
+          </div>
+          <div class="timeline-item">
+            <strong>Week 9-12:</strong> React Fundamentals - Components, hooks, state. Build dynamic applications with React.
+          </div>
+          <div class="timeline-item">
+            <strong>Week 13-16:</strong> Advanced React & Production - Testing, optimization, deployment. Ship production-ready applications.
+          </div>
+        </div>
+
+        <!-- Connections Section -->
+        <div class="roadmap-connections">
+          <h3>🔗 Frontend Development Skills Map</h3>
+          <div class="connections-grid">
+            <div class="connection-card">
+              <strong>Design & UX:</strong> Collaborate with designers. Understand CSS animations, responsive design, and user experience principles.
+            </div>
+            <div class="connection-card">
+              <strong>Backend Integration:</strong> Fetch data from APIs. Work with REST and GraphQL endpoints. Understand HTTP and authentication.
+            </div>
+            <div class="connection-card">
+              <strong>Performance:</strong> Optimize bundle size, rendering, and load times. Understand time/space complexity concepts.
+            </div>
+            <div class="connection-card">
+              <strong>Accessibility:</strong> Build inclusive websites. WCAG compliance, screen readers, semantic HTML matter.
+            </div>
+            <div class="connection-card">
+              <strong>DevOps & Deployment:</strong> Deploy to Vercel, Netlify, or AWS. Understand CI/CD pipelines and environment setup.
+            </div>
+            <div class="connection-card">
+              <strong>Testing:</strong> Write unit tests, integration tests, and E2E tests. Ensure code quality and prevent regressions.
+            </div>
+          </div>
+        </div>
+
+        <!-- Key Principles Section -->
+        <section class="lesson__content" style="margin-top: 3rem;">
+          <article class="lesson-section">
+            <h3>Frontend Development Principles</h3>
+            <p>
+              As you progress through this roadmap, keep these principles in mind:
+            </p>
+            <ul>
+              <li><strong>User first:</strong> Every decision should prioritize the user experience. Fast, accessible, beautiful.</li>
+              <li><strong>Progressive enhancement:</strong> Build for the lowest common denominator first, then enhance with advanced features.</li>
+              <li><strong>Performance matters:</strong> Every millisecond counts. Users abandon slow sites. Optimize aggressively.</li>
+              <li><strong>Semantic HTML:</strong> Use HTML correctly for accessibility and SEO. Structure matters.</li>
+              <li><strong>Separation of concerns:</strong> Keep HTML, CSS, and JavaScript separate. Components should do one thing well.</li>
+              <li><strong>DRY (Don't Repeat Yourself):</strong> Reuse code through components, utilities, and libraries. Avoid duplication.</li>
+            </ul>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        &copy; 2026 Interactive NS + CS Learning Platform &mdash; Computer Science &middot; Frontend Engineer Roadmap
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

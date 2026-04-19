@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Learn DNA Replication – Interactive NS + CS Learning Platform</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="enrichment.css" />
   </head>
   <body class="page page--lesson page--dna-replication">
     <header class="site-header">
@@ -32,112 +33,54 @@
 
       <header class="lesson__header">
         <p class="eyebrow">Biology &bull; DNA</p>
-        <h2 class="lesson__title">Learn DNA Replication</h2>
-        <p class="lesson__summary">
-          Explore how cells copy their DNA so that genetic information is passed on accurately from one
-          generation to the next.
-        </p>
+        <h2 class="lesson__title">DNA Replication</h2>
       </header>
 
-      <section class="lesson__media" aria-label="DNA replication video">
-        <div class="video-placeholder">
-          <p class="video-placeholder__label">Video lesson</p>
-          <p class="video-placeholder__text">
-            A short video or animation explaining DNA replication will appear here. For now, use this
-            page to build a clear mental picture of each step.
-          </p>
-        </div>
+      <!-- Interactive Learning Explorer powered by AI enrichment -->
+      <section class="lesson__enrichment" aria-label="Interactive learning explorer">
+        <div id="enrichment-content" class="enrichment-container"></div>
       </section>
 
       <section class="lesson__content" aria-label="DNA replication explanation sections">
-        <article class="lesson-section">
-          <h3>What is DNA replication?</h3>
-          <p>
-            DNA replication is the process of making an exact copy of a DNA molecule before a cell
-            divides. Each strand of the original double helix acts as a template for a new strand.
-          </p>
-        </article>
-
-        <article class="lesson-section">
-          <h3>Why does it matter?</h3>
-          <p>
-            Without reliable replication, cells could lose or change important genetic instructions.
-            Accurate copying keeps your traits, and the instructions inside your cells, consistent over
-            time.
-          </p>
-        </article>
-
-        <!-- Expandable steps -->
-        <article class="lesson-section lesson-step" id="step-1">
-          <button class="lesson-step__header" type="button">
-            <span class="lesson-step__label">Step 1</span>
-            <span class="lesson-step__title">DNA unwinds</span>
-            <span class="lesson-step__icon" aria-hidden="true">▾</span>
-          </button>
-          <div class="lesson-step__body">
-            <p>
-              The double helix opens up so that each strand can serve as a template. An enzyme called
-              <strong>helicase</strong> breaks the hydrogen bonds between the bases, separating the two
-              strands like unzipping a zipper.
-            </p>
-          </div>
-        </article>
-
-        <article class="lesson-section lesson-step" id="step-2">
-          <button class="lesson-step__header" type="button">
-            <span class="lesson-step__label">Step 2</span>
-            <span class="lesson-step__title">Complementary base pairing</span>
-            <span class="lesson-step__icon" aria-hidden="true">▾</span>
-          </button>
-          <div class="lesson-step__body">
-            <p>
-              New free-floating nucleotides line up with the exposed bases following the simple matching
-              rules: <strong>A pairs with T</strong>, and <strong>C pairs with G</strong>. This keeps
-              the sequence of genetic information the same.
-            </p>
-          </div>
-        </article>
-
-        <article class="lesson-section lesson-step" id="step-3">
-          <button class="lesson-step__header" type="button">
-            <span class="lesson-step__label">Step 3</span>
-            <span class="lesson-step__title">New strands form</span>
-            <span class="lesson-step__icon" aria-hidden="true">▾</span>
-          </button>
-          <div class="lesson-step__body">
-            <p>
-              Enzymes connect the new nucleotides together, forming the sugar-phosphate backbone of each
-              strand. In the end you have <strong>two DNA molecules</strong>, each with one original
-              strand and one new strand.
-            </p>
-          </div>
-        </article>
-
-        <article class="lesson-section">
-          <h3>Key enzymes involved</h3>
-          <p>
-            Important enzymes include <strong>helicase</strong> (unwinds the helix),
-            <strong>primase</strong> (lays down a short starting piece), <strong>DNA polymerase</strong>
-            (adds new nucleotides), and <strong>ligase</strong> (seals small gaps in the backbone).
-          </p>
-        </article>
-
-        <article class="lesson-section">
-          <h3>Common errors and mutations</h3>
-          <p>
-            Occasionally, mistakes happen when DNA is copied. These changes are called
-            <strong>mutations</strong>. Many are fixed or have no effect, but some can be harmful or,
-            in rare cases, helpful for evolution.
-          </p>
-        </article>
 
         <article class="lesson-section lesson-section--connection">
           <h3>Connection to Computer Science</h3>
           <p>
-            DNA replication is a lot like copying data in computing. There is an input (the original
-            DNA), an output (two copies), clear step-by-step rules, and built-in error checking. These
-            ideas connect to topics like <strong>algorithms</strong> and
-            <strong>time &amp; space complexity</strong> in Computer Science.
+            DNA replication is fundamentally a computation process, and studying it reveals deep connections to Computer Science concepts:
+          </p>
+          
+          <h4>Algorithms & Step-by-Step Processes</h4>
+          <p>
+            DNA replication follows a precise, deterministic algorithm. Each step must occur in order:
+            <strong>unwind → prime → synthesize → seal</strong>. This mirrors how algorithms in CS break down complex problems
+            into discrete, sequential steps. The process is so algorithmic that scientists can simulate it on computers.
+          </p>
+          
+          <h4>Error Checking & Validation</h4>
+          <p>
+            DNA polymerase includes built-in <strong>proofreading mechanisms</strong> that check for mistakes in real-time,
+            achieving error rates of only 1 per billion nucleotides. This is analogous to <strong>error-correcting codes</strong>
+            and <strong>checksum validation</strong> in networking and storage systems. Both systems prioritize accuracy and reliability.
+          </p>
+          
+          <h4>Time & Space Complexity</h4>
+          <p>
+            Replicating 3 billion base pairs in a human cell takes only 8-10 hours. This represents an incredibly efficient <strong>time complexity</strong>.
+            The cell also stores this massive information in a compact nucleus, demonstrating optimization of <strong>space complexity</strong>.
+            In CS, we face similar tradeoffs when designing data structures and algorithms.
+          </p>
+          
+          <h4>Parallelization & Concurrency</h4>
+          <p>
+            DNA replication doesn't happen from one end to the other sequentially. Instead, multiple replication forks work
+            simultaneously on the same DNA molecule. This is like <strong>parallel processing</strong> and <strong>multi-threading</strong>
+            in modern computing—breaking a large task into concurrent subtasks for faster completion.
+          </p>
+          
+          <h4>Data Copying & Versioning</h4>
+          <p>
+            The semi-conservative nature of replication (one old strand + one new strand) is like <strong>version control</strong> in Git.
+            You maintain one "original" reference while creating new copies. This ensures traceability and the ability to recover original data if needed.
           </p>
         </article>
       </section>
@@ -160,6 +103,7 @@
           </p>
         </div>
       </section>
+
     </main>
 
     <footer class="site-footer">
@@ -169,5 +113,12 @@
     </footer>
 
     <script src="script.js"></script>
+    <script type="module">
+      import { loadEnrichment } from './enrichment-loader.js';
+      
+      // Load enrichment content from demo endpoint
+      // In production, this would fetch from the real topic endpoint
+      loadEnrichment('enrichment-content', 'http://localhost:3000/api/demo/enrichment');
+    </script>
   </body>
 </html>

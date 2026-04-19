@@ -1,4 +1,15 @@
-// Basic interactivity for the Concept Bridge static site
+/**
+ * Concept Bridge - Main Interactivity Script
+ * 
+ * This file provides core interactions for the platform:
+ * 1. Home page panels - Expandable panels for exploring domains
+ * 2. Roadmap Explorer - Guided flow: select domain → role/skill → roadmap
+ * 3. CS Roadmap Detail - Renders role/skill-based learning paths
+ * 4. Simple lesson interactions - Forces demo, complexity examples
+ * 
+ * Uses IIFEs to keep each feature's scope isolated and avoid global pollution.
+ * All interactions degrade gracefully if elements aren't present.
+ */
 
 // Utility: safe query helpers
 function $(selector, parent) {
